@@ -13,8 +13,10 @@ This page describes how to download a slideslive presentation. The output is a s
   * `init_5_*.m4s` and `chunk_5_*.m4s`: These store the speaker's audio. 
   * `slides.json`: This is a simple json file indicating when each slide should be shown.
   * `*.png`: These are the slides.
-   Copy the above files into a "flat" directory. You should now have a single folder with the ~100s of `m4s` files, ~10s of `png` files, and one `json` file.
-5. Combine the m4s files into an mp4 video:
+
+5. Copy the above files into a "flat" directory. You should now have a single folder with the ~100s of `m4s` files, ~10s of `png` files, and one `json` file.
+
+6. Combine the m4s files into an mp4 video:
   ```
   cat init_3_*.m4s >> video.m4s
   cat chunk_3_*.m4s >> video.m4s
@@ -24,8 +26,8 @@ This page describes how to download a slideslive presentation. The output is a s
 
   ffmpeg -i video.m4s -i audio.m4s -c:v copy -c:a aac video.mp4
   ```
-6. Make a video from the slides and JSON metadata file: `python make_slides.py`
-7. Combine the speaker video and slide video into a single side-by-side video:
+7. Make a video from the slides and JSON metadata file: `python make_slides.py`
+8. Combine the speaker video and slide video into a single side-by-side video:
 ```
 ffmpeg -i video.mp4 -i slides.mp4  -filter_complex '[0:v]pad=iw*2:ih[int];[int][1:v]overlay=W/2:0[vid]' -map '[vid]' -map a:0 -c:v libx264 combined.mp4
 ```
