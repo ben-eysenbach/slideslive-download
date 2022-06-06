@@ -4,8 +4,7 @@ Last updated June 6, 2022.
 
 This page describes how to download a slideslive presentation. The output is a single video file that shows the speaker and slides side-by-side.
 
-1. Install a Chrome extension that allows you to save the video resources: [Save All Resources](https://chrome.google.com/webstore/detail/save-all-resources/abpdnfjocnmdomablahdcfnoggeeiedb?hl=en)
-   Restart your web-browser.
+1. Install a Chrome extension that allows you to save the video resources: [Save All Resources](https://chrome.google.com/webstore/detail/save-all-resources/abpdnfjocnmdomablahdcfnoggeeiedb?hl=en). Restart your web-browser.
 2. Navigate to the website hosting the slideslive presentation. Open the *Developer tools* and navigate to the far-right tab, titled *ResourcesSaver*.
 3. Start playing your video. Wait until it is done playing.
 4. In the *ResourcesSaver* tab, click *Save All Resources*. This includes all the relevant information to reconstruct the video, split into three types:
